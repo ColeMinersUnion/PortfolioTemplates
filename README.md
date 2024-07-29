@@ -35,5 +35,51 @@ Tada! You have a website.
 ## Page navigation with React-Router-Dom
 To find documentation on React-Router-Dom, please visit [ReactRouter](https://reactrouter.com/en/main)
 
+In your temrinal, please run
+```bash
+npm install react-router-dom
+```
+
 In the src directory add two folders, Components and Pages. The directory should appear as:
+src/
+├── assets/
+├── components/
+├── pages/
+├── App.css
+├── App.jsx
+├── index.css
+└── main.jsx
+
+In the components folder we will create two new files: Navbar.jsx and Footer.jsx
+###Navbar.jsx
+We will be creating a very simple navbar to navigate between pages. 
+
+```javascript
+import { Link } from 'react-router-dom';
+
+//navbar
+//we will add more links as our portfolio expands.
+export default function Navbar(){
+  return (
+    <>
+      <Link to={'/'}>
+        <a>Home<a/>
+      <Link/>
+    </>
+  );
+} 
+```
+
+###Footer.jsx
+Now we will create a footer to sit at the bottom of all of our pages. 
+```javascript
+export default function Footer(){
+    return (
+      <>
+        <h4>This website was built by Cole Hansen</h4>
+        <h4>07/29/2024</h4>
+      </>  
+    );
+}
+```
 
