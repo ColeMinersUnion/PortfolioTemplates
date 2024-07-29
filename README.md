@@ -40,7 +40,7 @@ In your temrinal, please run
 npm install react-router-dom
 ```
 
-In the src directory add two folders, Components and Pages. The directory should appear as:
+In the src directory add two folders, Components and Pages. The directory should appear as:\
 src/\
 ├── assets/\
 ├── components/\
