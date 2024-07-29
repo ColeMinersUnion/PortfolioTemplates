@@ -43,12 +43,12 @@ npm install react-router-dom
 In the src directory add two folders, Components and Pages. The directory should appear as:
 src/\
 ├── assets/\
-├── components/
+├── components/\
 ├── pages/\
 ├── App.css\
 ├── App.jsx\
 ├── index.css\
-└── main.jsx\
+└── main.jsx
 
 In the components folder we will create two new files: Navbar.jsx and Footer.jsx
 ###Navbar.jsx
