@@ -51,7 +51,7 @@ src/\
 └── main.jsx
 
 In the components folder we will create two new files: Navbar.jsx and Footer.jsx
-###Navbar.jsx
+### Navbar.jsx
 We will be creating a very simple navbar to navigate between pages. 
 
 ```javascript
@@ -63,14 +63,14 @@ export default function Navbar(){
   return (
     <>
       <Link to={'/'}>
-        <a>Home<a/>
-      <Link/>
+        <a>Home</a>
+      </Link>
     </>
   );
 } 
 ```
 
-###Footer.jsx
+### Footer.jsx
 Now we will create a footer to sit at the bottom of all of our pages. 
 ```javascript
 export default function Footer(){
@@ -82,4 +82,54 @@ export default function Footer(){
     );
 }
 ```
+
+### Main.jsx
+Adding a layout, router and router provide. 
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+import { Outlet, createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+
+const Layout = () => {
+  return (
+    <>
+      <Navbar/>
+      <Outlet/>
+      <Footer/>
+    </>
+  );
+};
+
+const router = createBrowserRouter([{
+  path:'/',
+  element:<Layout/>,
+  children : [
+    {
+      path:'/',
+      element:<App/>
+    }
+  ]
+}])
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router}></RouterProvider>
+)
+```
+
+## Adding Pages
+
+Here we'll add two more pages. An about page, and a project page. In the pages directory, add two new files. \
+pages/\
+├── About.jsx\
+└── Projects.jsx\
+
+### About.jsx
+
+### Projects.jsx
 
